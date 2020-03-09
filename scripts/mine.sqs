@@ -1,0 +1,19 @@
+#start
+_mina = nearestobject ("mina1", player)
+_mina2 = nearestobject ("mina2", player)
+
+?_mina distance player > _mina2 distance player: _mina = _mina2
+_mina2 = nil
+
+_sloup = nearestobject ("sloup", _mina)
+? _sloup == null : goto "end"
+
+? (_sloup distance2d _mina + 2) < (_sloup distance2d player) + (_mina distance2d player): goto "end"
+
+
+
+
+#end
+
+~0.1
+goto "start"
