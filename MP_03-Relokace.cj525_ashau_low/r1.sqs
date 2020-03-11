@@ -1,0 +1,18 @@
+vel sidechat "Vsem jednotkam v okoli, tady je FSB Veghel! Jsme pod tezkou palbou, opakuji, jsme pod tezkou palbou, vsichni do bojove pohotovosti!"
+~5
+Logika globalchat "McRay: ""Do hajzlu."""
+~5
+mcray sidechat "Vegheli, tady Havran. Co se deje? Prepinam."
+~5
+blake sidechat "Co si kurva myslis, McRayi! Hodte prdeli zpatky a pomozte nam!"
+~5
+vel sidechat "Blakeu, prestan zasirat kanal! Havrane, tady Veghel, jsme pod palbou, muzete proletet kolem a podivat se na nepratele ze vzduchu?"
+~10
+mcray sidechat "Rozumim, Vegheli, jsme na ceste."
+~2
+otoc1 = true;
+~3
+Logika globalchat "McRay: ""Drzte se, bude to drncat."""
+
+~30
+vel sidechat "Vsem jednotkam, hlavni sily prichazeji ze severu a jihu, zamerte se tam."

@@ -1,0 +1,30 @@
+? (!isServer): goto "end"
+
+
+#for
+	? (count units obrana1) < 8: [getpos obrana1pos, obrana1] exec "add_western_soldiers.sqs"
+	? (count units obrana2) < 8: [getpos obrana2pos, obrana2] exec "add_western_soldiers.sqs"
+	
+	? (count units utok1) < 8: [getpos utok1pos, utok1] exec "add_eastern_soldiers.sqs"
+	? (count units utok2) < 8: [getpos utok2pos, utok2] exec "add_eastern_soldiers.sqs"
+	? (count units utok3) < 8: [getpos utok3pos, utok3] exec "add_eastern_soldiers.sqs"
+	
+	obrana1 move getpos obrana1pos
+	obrana2 move getpos obrana2pos
+	
+	utok1 move getpos obrana1pos
+	utok2 move getpos obrana1pos
+	utok3 move getpos obrana2pos
+	
+	~1
+? not(endbattle):goto "for"
+	
+#for2
+	? (count units utok2) < 8: [getpos zakladna, utok2] exec "add_eastern_soldiers.sqs"
+	? (count units utok3) < 8: [getpos zakladna, utok3] exec "add_eastern_soldiers.sqs"
+	utok2 move getpos enyfinal
+	utok3 move getpos enyfinal
+	~1
+goto "for2"
+
+#end

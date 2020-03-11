@@ -1,0 +1,27 @@
+vegetation_gen = true
+
+letime1 = false
+letime2 = false
+
+otoc1 = false
+endbattle = false
+
+obrana1 = group o1
+obrana2 = group o2
+
+navrat = false
+
+utok1 = group u1
+utok2 = group u2
+utok3 = group u3
+utok4 = group u4
+
+"deleteVehicle _x" foreach units obrana1
+"deleteVehicle _x" foreach units obrana2
+
+"deleteVehicle _x" foreach units utok1
+"deleteVehicle _x" foreach units utok2
+"deleteVehicle _x" foreach units utok3
+"deleteVehicle _x" foreach units utok4
+
+[] exec "letime1.sqs"

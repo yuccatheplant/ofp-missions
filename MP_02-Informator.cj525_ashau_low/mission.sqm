@@ -9,7 +9,7 @@ class Mission
 		"Baracken",
 		"sebnam_vha",
 		"sebnam_vh",
-		"sebnam_vc"
+		"COCMine"
 	};
 	addOnsAuto[]=
 	{
@@ -17,18 +17,20 @@ class Mission
 		"ks_namcti092",
 		"sebnam_vh",
 		"Baracken",
-		"sebnam_vha"
+		"sebnam_vha",
+		"COCMine"
 	};
 	randomSeed=1157123;
 	class Intel
 	{
+		briefingName="Informator";
 		startWeather=0.525012;
 		forecastWeather=0.531266;
 		hour=14;
 	};
 	class Groups
 	{
-		items=12;
+		items=13;
 		class Item0
 		{
 			side="WEST";
@@ -563,12 +565,11 @@ class Mission
 				items=6;
 				class Item0
 				{
-					position[]={10418.159180,207.386215,8347.150391};
+					position[]={10394.531250,207.489029,8410.971680};
 					special="NONE";
 					id=26;
 					side="WEST";
 					vehicle="sebnamarmywo";
-					player="PLAYER COMMANDER";
 					leader=1;
 					rank="LIEUTNANT";
 					skill=0.600000;
@@ -639,10 +640,29 @@ class Mission
 				};
 			};
 		};
+		class Item12
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10626.155273,307.679016,5575.585449};
+					id=34;
+					side="WEST";
+					vehicle="sebnamarmyw";
+					player="PLAYER COMMANDER";
+					leader=1;
+					skill=0.600000;
+					text="testsubject";
+				};
+			};
+		};
 	};
 	class Vehicles
 	{
-		items=5;
+		items=7;
 		class Item0
 		{
 			position[]={10438.110352,207.482178,8423.547852};
@@ -697,6 +717,24 @@ class Mission
 			text="uh1";
 			init="this setcaptive true; [this] exec ""basic\crate\crate_heli.sqs"";this setfuel 0";
 		};
+		class Item5
+		{
+			position[]={10630.374023,307.400665,5578.452148};
+			azimut=180.000000;
+			id=32;
+			side="EMPTY";
+			vehicle="FlagCarrier";
+			skill=0.600000;
+			init=";this setpos [getpos this select 0, getpos this select 1, -6.88]";
+		};
+		class Item6
+		{
+			position[]={10627.678711,307.452667,5578.205078};
+			id=33;
+			side="EMPTY";
+			vehicle="COCPomz";
+			skill=0.600000;
+		};
 	};
 	class Markers
 	{
@@ -728,7 +766,7 @@ class Mission
 	};
 	class Sensors
 	{
-		items=4;
+		items=3;
 		class Item0
 		{
 			position[]={10258.525391,165.108078,8533.814453};
@@ -744,30 +782,6 @@ class Mission
 		};
 		class Item1
 		{
-			position[]={10486.253906,200.456909,8342.206055};
-			a=0.000000;
-			b=0.000000;
-			activationBy="ALPHA";
-			age="UNKNOWN";
-			text="HELI start 1";
-			class Effects
-			{
-			};
-		};
-		class Item2
-		{
-			position[]={10487.141602,201.258163,8334.836914};
-			a=0.000000;
-			b=0.000000;
-			activationBy="BRAVO";
-			age="UNKNOWN";
-			text="HELI start 2";
-			class Effects
-			{
-			};
-		};
-		class Item3
-		{
 			position[]={10451.800781,208.519501,8344.864258};
 			a=0.000000;
 			b=0.000000;
@@ -777,6 +791,20 @@ class Mission
 			{
 			};
 			synchronizations[]={0};
+		};
+		class Item2
+		{
+			position[]={10630.507813,307.526062,5573.251953};
+			a=0.000000;
+			b=0.000000;
+			repeating=1;
+			age="UNKNOWN";
+			expCond="nearestobject [player, ""cocpomz""] distance player < 2";
+			expActiv="touchoffpomz = nearestobject [player, ""cocpomz""] addAction [""Odpalit POMZ"", ""basic\mine\touchoff.sqs""];touchoffpomz = nearestobject [player, ""cocpomz""] addAction [""Zneskodnit POMZ"", ""basic\mine\defuse.sqs""]";
+			expDesactiv="nearestobject [player, ""cocpomz""] removeaction touchoffpomz";
+			class Effects
+			{
+			};
 		};
 	};
 };

@@ -1,0 +1,11 @@
+? (!isServer): goto "end"
+#for
+	~ (random 2) + 1
+	"GrenadeHand" createvehicle [(getpos bum1 select 0) + random 200, (getpos bum1 select 1) - random 40, 0]
+	
+	~ (random 2) + 1
+	"GrenadeHand" createvehicle [(getpos bum2 select 0) + random 300, (getpos bum2 select 1) - random 60, 0]
+
+? not (letime2): goto "for"
+
+#end

@@ -1,0 +1,10 @@
+_i = 0
+_group = units group player
+
+#for
+@ (_group select _i) in uh1
+_i=_i+1
+? _i < count (_group): goto "for"
+
+letime1 = true
+resp setpos getpos resp1

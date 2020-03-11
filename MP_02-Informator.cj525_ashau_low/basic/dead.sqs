@@ -1,0 +1,19 @@
+0.01 fadeSound 0;
+0.01 fadeMusic 0;
+titletext ["", "black out", 0.01]
+
+
+_weapons = weapons player
+_magazines = magazines player
+
+@ alive player
+
+1 fadeSound 1;
+1 fadeMusic 1;
+titletext ["", "black in", 1]
+
+~0.1
+removeallweapons player
+
+"player addmagazine _x" forEach _magazines
+"player addweapon _x" forEach _weapons

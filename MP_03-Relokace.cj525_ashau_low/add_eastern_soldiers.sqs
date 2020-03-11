@@ -1,0 +1,8 @@
+? (!isServer): goto "end"
+
+_pos = _this select 0
+_group = _this select 1
+
+"sebnam_vcsoldier" createUnit [_pos, _group, "this allowfleeing 0", 0.75, "private"]
+
+#end

@@ -1,0 +1,19 @@
+_i = 0
+_group = units group player
+
+#for
+@ (_group select _i) in uh1
+_i=_i+1
+? _i < count (_group): goto "for"
+
+letime1 = true
+
+titletext ["nadpis1\n\n", "plain", 1]
+~2.5
+cuttext ["nadpis1\n\n", "plain", 1]
+~2.5
+titletext ["nadpis1\nnadpis2\n", "plain", 1]
+~2.5
+cuttext ["nadpis1\nnadpis2\n", "plain", 1]
+~2.5
+titletext ["nadpis1\nnadpis2\nnadpis3", "plain", 1]

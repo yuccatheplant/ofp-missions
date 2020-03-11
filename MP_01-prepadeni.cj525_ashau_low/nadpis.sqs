@@ -1,0 +1,9 @@
+
+titletext ["nadpis1\n\n", "plain down", 1]
+~3
+cuttext ["nadpis1\nnadpis2\n", "plain down", 1]
+~2
+titletext ["nadpis1\nnadpis2\n", "plain down", 1]
+~1
+cuttext ["nadpis1\nnadpis2\nnadpis3", "plain down", 1]
+

@@ -1,0 +1,29 @@
+Logika globalchat "McRay: ""Hodne stesti! Budem na vysilacce."""
+~5
+
+mcray sidechat "Tady havran, vysadili jsme Alfu zapadne od zakladny. Pozor na koho strilite, zapadni kridlo."
+~5
+
+blake sidechat "Rozumime, McRayi. Nic ale nezarucujem."
+
+~5 
+mcray sidechat "Vidim obrovske hemzeni na vasem severnim svahu. Jdeme to pokropit."
+
+~5
+
+vel sidechat "A Shau, tady Veghel, potrebujeme letecke posily, jsme pod silnym utokem, prepinam!"
+~5
+ashau sidechat "Vegheli, tady A Shau. Negativni, zaznamenali jsme nejake hemzeni i u nas, prepinam."
+~5
+vel sidechat "A Shau! My to tu dlouho nevydrzime! Potrebuje-"
+~10
+
+ashau sidechat "Vegheli?! Co se tam deje? Prepinam."
+
+~5
+mcray sidechat "A Shau, tady Havran! TOC ve Veghellu dostalo primy zasah! Prepinam!"
+
+~5 
+blake sidechat "Vsem jednotkam v okoli Veghellu, tady Porucik Blake! Prebiram veleni nad zakladnou! Prijem."
+~5
+blake sidechat "Alfo! Pohnete si kostrou, stahujeme se ze zapadni strany k severu, takze nebudete mit krytou cestou! Veghell konec."

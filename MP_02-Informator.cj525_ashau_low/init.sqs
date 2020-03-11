@@ -1,0 +1,9 @@
+[] exec "basic\mine\mine.sqs"
+~1
+player addEventHandler ["AnimChanged", "hint format [""%1"",_this]"]
+player addEventHandler ["AnimChanged", {hint format ['%1, %2',_this select 0, _this select 1]}];
+
+#for
+;hint format ["%1", speed player]
+~1
+goto "for"
