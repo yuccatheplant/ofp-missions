@@ -9,13 +9,16 @@ class Mission
 		"Baracken",
 		"sebnam_vha",
 		"sebnam_vh",
-		"COCMine"
+		"COCMine",
+		"sebnam_obj",
+		"PCsaigonb"
 	};
 	addOnsAuto[]=
 	{
 		"sebnam_us",
 		"ks_namcti092",
 		"sebnam_vh",
+		"PCsaigonb",
 		"Baracken",
 		"sebnam_vha",
 		"COCMine"
@@ -30,7 +33,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=13;
+		items=18;
 		class Item0
 		{
 			side="WEST";
@@ -565,7 +568,7 @@ class Mission
 				items=6;
 				class Item0
 				{
-					position[]={10394.531250,207.489029,8410.971680};
+					position[]={10389.527344,207.446152,8402.873047};
 					special="NONE";
 					id=26;
 					side="WEST";
@@ -577,7 +580,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={10403.108398,207.786118,8414.593750};
+					position[]={10398.104492,207.489502,8406.495117};
 					azimut=179.457947;
 					special="NONE";
 					id=31;
@@ -589,7 +592,7 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={10398.205078,207.755753,8414.821289};
+					position[]={10393.201172,207.306625,8406.722656};
 					azimut=179.457947;
 					special="NONE";
 					id=30;
@@ -601,7 +604,7 @@ class Mission
 				};
 				class Item3
 				{
-					position[]={10393.967773,207.743698,8414.781250};
+					position[]={10388.963867,207.368546,8406.682617};
 					azimut=179.457947;
 					special="NONE";
 					id=29;
@@ -614,7 +617,7 @@ class Mission
 				};
 				class Item4
 				{
-					position[]={10388.645508,207.374207,8414.726563};
+					position[]={10383.641602,207.446426,8406.627930};
 					azimut=179.457947;
 					special="NONE";
 					id=27;
@@ -627,7 +630,7 @@ class Mission
 				};
 				class Item5
 				{
-					position[]={10382.773438,207.271545,8414.956055};
+					position[]={10379.349609,207.489731,8407.450195};
 					azimut=179.457947;
 					special="NONE";
 					id=28;
@@ -648,7 +651,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={10626.155273,307.679016,5575.585449};
+					position[]={8772.402344,300.713501,5823.069824};
 					id=34;
 					side="WEST";
 					vehicle="sebnamarmyw";
@@ -659,10 +662,106 @@ class Mission
 				};
 			};
 		};
+		class Item13
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={9223.151367,245.720367,5285.586914};
+					special="NONE";
+					id=37;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.600000;
+					init="[getpos this, 1200, 1500] exec ""basic\vegetation\vegetation.sqs"";";
+				};
+			};
+		};
+		class Item14
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={9919.618164,69.955322,5700.235840};
+					special="NONE";
+					id=38;
+					side="CIV";
+					vehicle="PCaidoaC";
+					leader=1;
+					skill=0.600000;
+					text="culidlova_laska";
+					init="this disableai ""MOVE""";
+				};
+			};
+		};
+		class Item15
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={9790.117188,84.459869,5375.377441};
+					special="NONE";
+					id=39;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.600000;
+					init="[getpos this, 1200] exec ""basic\vegetation\vegetation.sqs""";
+				};
+			};
+		};
+		class Item16
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10396.310547,115.763519,4750.994629};
+					special="NONE";
+					id=40;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.600000;
+					init="[getpos this, 1200, 1500] exec ""basic\vegetation\vegetation.sqs"";[getpos this, 1200, 1500] exec ""basic\mine\generator.sqs"";";
+				};
+			};
+		};
+		class Item17
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={9309.028320,230.388718,5280.547852};
+					special="NONE";
+					id=41;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.600000;
+					init="[getpos this, 1000, 1500] exec ""basic\mine\generator.sqs"";";
+				};
+			};
+		};
 	};
 	class Vehicles
 	{
-		items=7;
+		items=9;
 		class Item0
 		{
 			position[]={10438.110352,207.482178,8423.547852};
@@ -719,7 +818,7 @@ class Mission
 		};
 		class Item5
 		{
-			position[]={10630.374023,307.400665,5578.452148};
+			position[]={10588.474609,302.408508,5577.036621};
 			azimut=180.000000;
 			id=32;
 			side="EMPTY";
@@ -729,11 +828,29 @@ class Mission
 		};
 		class Item6
 		{
-			position[]={10627.678711,307.452667,5578.205078};
+			position[]={10585.779297,301.386932,5576.789551};
 			id=33;
 			side="EMPTY";
 			vehicle="COCPomz";
 			skill=0.600000;
+		};
+		class Item7
+		{
+			position[]={8752.982422,309.708038,5949.424316};
+			id=35;
+			side="EMPTY";
+			vehicle="HeliHEmpty";
+			skill=0.600000;
+			text="h1";
+		};
+		class Item8
+		{
+			position[]={10627.509766,307.653900,5575.696777};
+			id=36;
+			side="EMPTY";
+			vehicle="HeliHEmpty";
+			skill=0.600000;
+			text="h2";
 		};
 	};
 	class Markers
@@ -766,7 +883,7 @@ class Mission
 	};
 	class Sensors
 	{
-		items=3;
+		items=7;
 		class Item0
 		{
 			position[]={10258.525391,165.108078,8533.814453};
@@ -794,7 +911,7 @@ class Mission
 		};
 		class Item2
 		{
-			position[]={10630.507813,307.526062,5573.251953};
+			position[]={10588.608398,302.496277,5571.836426};
 			a=0.000000;
 			b=0.000000;
 			repeating=1;
@@ -802,6 +919,55 @@ class Mission
 			expCond="nearestobject [player, ""cocpomz""] distance player < 2";
 			expActiv="touchoffpomz = nearestobject [player, ""cocpomz""] addAction [""Odpalit POMZ"", ""basic\mine\touchoff.sqs""];touchoffpomz = nearestobject [player, ""cocpomz""] addAction [""Zneskodnit POMZ"", ""basic\mine\defuse.sqs""]";
 			expDesactiv="nearestobject [player, ""cocpomz""] removeaction touchoffpomz";
+			class Effects
+			{
+			};
+		};
+		class Item3
+		{
+			position[]={9921.708984,70.043831,5699.994141};
+			a=0.000000;
+			b=0.000000;
+			age="UNKNOWN";
+			expCond="muzebouchnout AND player distance culidlova_laska < 2";
+			expActiv="nil = ""grenadehand"" createVehicle getpos culidlova_laska";
+			class Effects
+			{
+				sound="Eng8";
+			};
+		};
+		class Item4
+		{
+			position[]={9223.396484,245.772690,5286.771973};
+			a=600.000000;
+			b=750.000000;
+			rectangular=1;
+			age="UNKNOWN";
+			expCond="true";
+			class Effects
+			{
+			};
+		};
+		class Item5
+		{
+			position[]={10396.555664,115.968475,4752.179688};
+			a=600.000000;
+			b=750.000000;
+			rectangular=1;
+			age="UNKNOWN";
+			expCond="true";
+			class Effects
+			{
+			};
+		};
+		class Item6
+		{
+			position[]={9309.272461,230.321487,5281.732910};
+			a=500.000000;
+			b=750.000000;
+			rectangular=1;
+			age="UNKNOWN";
+			expCond="true";
 			class Effects
 			{
 			};

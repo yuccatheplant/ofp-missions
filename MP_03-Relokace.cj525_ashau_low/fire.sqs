@@ -1,4 +1,5 @@
 ? (!isServer): goto "end"
+goto "end"
 
 _count = _this select 0
 _boom = _this select 1

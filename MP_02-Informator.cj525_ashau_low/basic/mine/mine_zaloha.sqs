@@ -7,8 +7,17 @@ goto "minepick"
 
 
 #minecheck
-
-	? player distance _mine < 3 AND sqrt ( (velocity player select 0)^2 + (velocity player select 1)^2 + (velocity player select 2)^2 ) > 1 : goto "bum"
+	
+	_flag = nearestObject [getpos _mine, "FlagCarrier"]
+	? isnull _flag : goto "end"
+	
+	_mine_flag_distance = (sqrt ( ((getpos _mine select 0) - (getpos _flag select 0))^2 + ((getpos _mine select 1) - (getpos _flag select 1))^2 ))
+	? _mine_flag_distance > 6 : goto "end"
+	
+	_player_mine_distance = (sqrt ( ((getpos player select 0) - (getpos _mine select 0))^2 + ((getpos player select 1) - (getpos _mine select 1))^2 ))
+	_player_flag_distance = (sqrt ( ((getpos player select 0) - (getpos _flag select 0))^2 + ((getpos player select 1) - (getpos _flag select 1))^2 ))
+	
+	? _mine_flag_distance + 1 >= _player_mine_distance + _player_flag_distance : goto "bum"
 
 	#end
 	~0.5

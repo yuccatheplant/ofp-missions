@@ -19,8 +19,8 @@ _actionid = _this select 2
 		~0.1
 	? _i < 3 : goto "for"
 	
-	titletext ["Mina vybuchne za 5 vterin.", "plain", 0.25]
-	~5
+	titletext ["Mina vybuchne za 10 vterin.", "plain", 0.25]
+	~10
 	
 	"grenadehand" createvehicle getpos _mine
 	
