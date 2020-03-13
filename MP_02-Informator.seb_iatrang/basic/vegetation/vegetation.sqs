@@ -1,5 +1,5 @@
 ? (!isServer): goto "end"
-goto "end"
+;goto "end"
 
 _position = _this select 0
 _radiusX = _this select 1

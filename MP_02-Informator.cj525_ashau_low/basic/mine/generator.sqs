@@ -1,5 +1,5 @@
 ? (!isServer): goto "end"
-
+goto "end"
 
 _position = _this select 0
 _radiusX = _this select 1
@@ -10,7 +10,7 @@ _miniradiuspolomer = _miniradius / 2
 
 _objects = ["COCPomz", "COCPomz", "COCM16a1Betty"]
 
-_count = (_radiusX * _radiusY) / 2000
+_count = (_radiusX * _radiusY) / 2500
 
 _i = 0
 

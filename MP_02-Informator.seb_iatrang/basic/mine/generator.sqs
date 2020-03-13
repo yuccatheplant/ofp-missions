@@ -1,0 +1,70 @@
+~1
+? (isnull player): goto "end"
+
+_max_radius = 100 ;100
+_min_radius = 50 ;50
+_mine_count = 5 ;5
+
+_max_radius_div2 = _max_radius/2
+
+;_mines = ["COCPomz", "COCPomz", "COCM16a1Betty"]
+
+_safe_zones = [[safe_zone1, 150]]
+
+_spawned_mines = []
+_logic = "Logic" createvehicle getpos player
+
+#main
+	? count _spawned_mines == 0 : goto "to_spawn"
+	
+	_i = 0
+	#for_delete
+		? (_spawned_mines select _i) distance player > _max_radius : goto "delete"
+		
+		_i = _i+1
+		#delete_done
+		~0.01
+	? _i < count _spawned_mines : goto "for_delete"
+
+	#to_spawn
+	
+	_i = count _spawned_mines
+	#for_spawn
+		? _i >= _mine_count : goto "spawn_skip"
+		
+		#generate_position
+			~0.1
+			_logic setpos [(getpos player select 0) + (random _max_radius) - _max_radius_div2, (getpos player select 1) + (random _max_radius) - _max_radius_div2, 0]
+		? _logic distance player < _min_radius: goto "generate_position"
+		
+		_j = 0
+		#for_safe_zones
+			? _j >= count _safe_zones: goto "endfor_safe_zones"
+			
+			? ((_safe_zones select _j) select 0) distance _logic < ((_safe_zones select _j) select 1): goto "spawn_skip"
+			
+			_j = _j+1
+			goto "for_safe_zones"
+		#endfor_safe_zones
+		
+		
+		_mine = "COCPomz" createvehicle getpos _logic
+		_spawned_mines = _spawned_mines + [_mine]
+		
+		_i = _i+1
+		~0.01
+	goto "for_spawn"
+	#spawn_skip
+	
+	~0.5
+goto "main"
+
+
+#delete
+	_mine = _spawned_mines select _i
+	_spawned_mines = _spawned_mines - [_mine]
+	deletevehicle _mine
+goto "delete_done"
+
+
+#end

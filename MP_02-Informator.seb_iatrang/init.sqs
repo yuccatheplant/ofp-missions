@@ -1,8 +1,8 @@
 [] exec "basic\mine\mine.sqs"
+[] exec "basic\mine\generator.sqs"
 [] exec "letime1.sqs"
 
 muzebouchnout = false
-enymove1 = false
 
 ~1
 ? name player == "Culidl0" : muzebouchnout = true

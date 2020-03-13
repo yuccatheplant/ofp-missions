@@ -1,0 +1,45 @@
+#for
+
+	_mine = nearestObject [getpos player, "COCPomz"]
+	_mine2 = nearestObject [getpos player, "COCM16a1Betty"]
+
+goto "minepick"
+
+
+#minecheck
+
+	? player distance _mine < 3 AND sqrt ( (velocity player select 0)^2 + (velocity player select 1)^2 + (velocity player select 2)^2 ) > 1 : goto "bum"
+
+	#end
+	~0.5
+goto "for"
+
+
+#bum
+	? sqrt ( (velocity player select 0)^2 + (velocity player select 1)^2 + (velocity player select 2)^2 ) < 2.5 : goto "checkbum"
+#totalbum
+	_mine setdamage 1
+	deletevehicle _flag
+goto "end"
+
+
+#checkbum
+	titletext ["STOP! Stojis na mine!\nNehybej se, nebo vybuchnes!", "plain", 0.25]
+	~1
+	
+	_dir = getdir player
+	
+#checkbumloop	
+	? speed player != 0 : goto "totalbum"
+	? getdir player != _dir : goto "totalbum"
+	
+	~0.1
+goto "checkbumloop"
+
+
+#minepick
+	? isnull _mine AND isnull _mine2 : goto "end"
+	? not isnull _mine AND not isnull _mine2 AND _mine distance player > _mine2 distance player: _mine = _mine2
+	? isnull _mine : _mine = _mine2
+
+goto "minecheck"

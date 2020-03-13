@@ -1,0 +1,16 @@
+_crate = _this select 0
+
+clearweaponcargo _crate
+clearmagazinecargo _crate
+
+_crate addWeaponCargo ["sebm16a1", 2];
+_crate addMagazineCargo ["sebm3a1mag", 8];
+
+_crate addWeaponCargo ["sebcar15", 1];
+_crate addMagazineCargo ["sebcar15mag", 4];
+
+_crate addWeaponCargo ["sebm79", 1];
+_crate addMagazineCargo ["sebm79HEammobag", 1];
+
+_crate addMagazineCargo ["handgrenade", 10];
+_crate addMagazineCargo ["SmokeShell", 10];

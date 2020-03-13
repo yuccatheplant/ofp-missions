@@ -1,0 +1,33 @@
+_mine = _this select 0
+_caller = _this select 1
+_actionid = _this select 2
+
+	? not ("HandGrenade" in magazines _caller) : goto "nogrenades"
+
+	_mine removeaction _actionid
+	_caller removeMagazine "HandGrenade"
+	
+	_i = 0
+	_dir = getdir _caller
+	_pos = getpos _caller
+	#for
+		_caller playmove "Lying"
+		_caller setpos _pos
+		_caller setdir _dir
+		
+		_i = _i + 0.1
+		~0.1
+	? _i < 3 : goto "for"
+	
+	titletext ["Mina vybuchne za 10 vterin.", "plain", 0.25]
+	~10
+	
+	"grenadehand" createvehicle getpos _mine
+	
+goto "end"
+
+
+#nogrenades
+	titletext ["Pro vykonani teto akce musite mit v inventari alespon jeden granat.", "plain", 0.25]
+
+# end

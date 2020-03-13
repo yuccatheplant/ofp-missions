@@ -1,0 +1,42 @@
+? not alive staresina : goto "mrtev"
+logika globalchat "Staresina: ""Doby den, jak she mathe?"""
+~5
+
+? not alive staresina : goto "mrtev"
+logika globalchat format ["%1: ""Dobry den, hledame pana jmenem High Ping.""", name player]
+~5
+
+? not alive staresina : goto "mrtev"
+logika globalchat "Staresina: ""Ano, vysoky ping je problem problem ano, ano, my tady routry skoro zadamo, jenom 50 dolla!"""
+~10
+
+? not alive staresina : goto "mrtev"
+logika globalchat format ["%1: ""Ne, my hledame osobu, ktera se jmenuje High Ping!""", name player]
+~5
+
+? not alive staresina : goto "mrtev"
+logika globalchat "Staresina: ""Dobze zadny routa, a co tagle tato hehky bato! Unese 150 kilo! 10 dolla!"""
+~10
+
+? not alive staresina : goto "mrtev"
+logika globalchat format ["%1: ""Kurva my nechceme zadny batoh! Kde je ta osoba?!""", name player]
+~5
+
+? not alive staresina : goto "mrtev"
+logika globalchat "Staresina: ""Ah, taze nudle? My dobe nudle jako z Vietnamu, nelepsi v okoli sta metru, 5 dolla!"""
+~10
+
+? not alive staresina : goto "mrtev"
+logika globalchat format ["%1: ""Solly mvy necem nic k jidlu, lozumeno?!""", name player]
+~5
+
+? not alive staresina : goto "mrtev"
+logika globalchat "Staresina: ""No jo, porad! Tady taky clovek nemuze ani zkusit si prividelat! Prisli jste pozde, pred pul hodinou tu byl vietcong a odtahli ho do vesnice na jihu."""
+~15
+
+
+goto "end"
+#mrtev
+titletext ["Vy debilci! Tak si to najdete sami, kreteni zasrani!","plain"]
+
+#end

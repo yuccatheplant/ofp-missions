@@ -1,0 +1,12 @@
+_i = 0
+_group = units group player
+
+#for
+@ not ((_group select _i) in uh1)
+_i=_i+1
+? _i < count (_group): goto "for"
+
+
+[] exec "r3.sqs"
+~ 2
+letime2 = true

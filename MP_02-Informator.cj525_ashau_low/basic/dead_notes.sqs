@@ -1,0 +1,4 @@
+~1
+
+_notes = ["RIP In Peace", "Kdyz umres, tak je to na dlouho...\nOvsem ne tak na dlouho jako pockat, nez se tvoje skupina vybavi v arzenalu.", "Alespon jsi neselhal v umreni.", "Spachal jsi umreni.", "Vase potlacovaci palba nebyla dostatecne potlacovaci.", "Mas v tele o jednu kouli vic, nez bys mel.", "Stejne by te brzo zabily ty vojenske konzervy, takze je to jedno.", "Foxtrot Uniform Charlie Kilo.", "Nekdy je lepsi si to nechat projit hlavou.", "Cokoliv jsme na tobe milovali a cemukoliv jsme se obdivovali, trva a potrva v ocich vsech az do konce veku.\nNebo nez se ozerem a zapomenem na tebe.", "Zivot mame jen pujceny - ne darovany.\nNastesti se nikdo z nas nedozije toho, az uvidi ten urok."]
+titletext [(_notes select (random (count _notes - 0.5))), "plain", 1]

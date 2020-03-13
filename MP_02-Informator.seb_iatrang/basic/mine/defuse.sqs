@@ -1,0 +1,34 @@
+moje_globalni_promenna_ktera_je_urcite_identicka_mina = _this select 0
+_caller = _this select 1
+_actionid = _this select 2
+
+	moje_globalni_promenna_ktera_je_urcite_identicka_mina removeaction _actionid
+	
+	titletext ["Nesmis se pohnout, dokud nebude mina zneskodnena!", "plain", 0.25]
+	_caller playmove "Lying"
+	
+	~3
+	
+	titletext ["Zneskodnovani zapocalo.", "plain", 0.25]
+	_eventhandler = _caller addEventHandler ["fired", "moje_globalni_promenna_ktera_je_urcite_identicka_mina setdamage 1"]
+	
+	_i = 0
+	_dir = getdir _caller
+	#for
+		? speed _caller != 0 : goto "bum"
+		? getdir _caller != _dir : goto "bum"
+
+		_i = _i + 0.1
+		~0.1
+	? _i < 30 : goto "for"
+	
+	deletevehicle moje_globalni_promenna_ktera_je_urcite_identicka_mina
+	titletext ["Mina byla zneskodnena.", "plain", 0.25]
+	
+goto "end"
+	
+#bum
+	moje_globalni_promenna_ktera_je_urcite_identicka_mina setdamage 1
+	
+#end
+	_caller removeEventHandler ["fired", _eventhandler]
