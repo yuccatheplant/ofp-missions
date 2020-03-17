@@ -9,7 +9,7 @@ _max_radius_div2 = _max_radius/2
 
 ;_mines = ["COCPomz", "COCPomz", "COCM16a1Betty"]
 
-_safe_zones = [[safe_zone1, 150]]
+_safe_zones = [[safe_zone1, 150], [h1, 30], [safe_zone2, 100], [safe_zone3, 30], [h2, 30]]
 
 _spawned_mines = []
 _logic = "Logic" createvehicle getpos player
@@ -35,7 +35,16 @@ _logic = "Logic" createvehicle getpos player
 		#generate_position
 			~0.1
 			_logic setpos [(getpos player select 0) + (random _max_radius) - _max_radius_div2, (getpos player select 1) + (random _max_radius) - _max_radius_div2, 0]
-		? _logic distance player < _min_radius: goto "generate_position"
+		
+		_pi = 0
+		#player_check
+			? _pi >= count (units group player) : goto "end_player_check"
+			
+			? _logic distance ((units group player) select _pi) < _min_radius: goto "generate_position"
+			_pi = _pi+1
+			
+			goto "player_check"
+		#end_player_check
 		
 		_j = 0
 		#for_safe_zones

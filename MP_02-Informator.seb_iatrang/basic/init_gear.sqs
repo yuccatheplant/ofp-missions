@@ -1,0 +1,9 @@
+_unit = _this select 0
+
+_weapon = "sebm16a1"
+_magazine = "sebm16a1mag"
+_grenade = "handgrenade"
+
+removeallweapons _unit
+"_unit addmagazine _x" foreach [_magazine,_magazine,_magazine,_magazine,_magazine,_magazine,_magazine,_grenade,_grenade,_grenade]
+_unit addweapon _weapon

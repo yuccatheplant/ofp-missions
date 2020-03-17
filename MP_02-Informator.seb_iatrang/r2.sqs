@@ -1,0 +1,15 @@
+[] exec "high_ping.sqs"
+~5
+
+logika globalchat "High Ping: ""Nestrilejte! Ja jsem ten v cernym pyzamu s akackem!"""
+~5
+
+logika globalchat format ["%1: ""Vsichni jsou tady v cernym pyzamu s akackem!""", name leader group player]
+~5
+
+logika globalchat "High Ping: ""Jo! Parchanti se oblikaj podle nejnovejsi mody, ale ja jsem tady nejvetsi stramak."""
+~5
+logika globalchat "High Ping: ""Predpokladam, ze bysme meli vzit nohy na ramena."""
+~5
+
+logika globalchat format ["%1: ""Jo, jdeme odsud!""", name leader group player]

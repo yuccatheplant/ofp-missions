@@ -31,7 +31,7 @@ logika globalchat format ["%1: ""Solly mvy necem nic k jidlu, lozumeno?!""", nam
 ~5
 
 ? not alive staresina : goto "mrtev"
-logika globalchat "Staresina: ""No jo, porad! Tady taky clovek nemuze ani zkusit si prividelat! Prisli jste pozde, pred pul hodinou tu byl vietcong a odtahli ho do vesnice na jihu."""
+logika globalchat "Staresina: ""No jo, porad! Tady taky clovek nemuze ani zkusit si prividelat! Prisli jste pozde, pred pul hodinou tu byl vietcong a odtahli ho do vesnice na severu."""
 ~15
 
 
@@ -40,3 +40,4 @@ goto "end"
 titletext ["Vy debilci! Tak si to najdete sami, kreteni zasrani!","plain"]
 
 #end
+vcutok1 = true

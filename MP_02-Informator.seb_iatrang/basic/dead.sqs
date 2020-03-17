@@ -10,6 +10,8 @@ _magazines = magazines player
 
 @ alive player
 
+player setpos getpos resp
+
 1 fadeSound 1;
 1 fadeMusic 1;
 titletext ["", "black in", 1]

@@ -2,8 +2,18 @@
 [] exec "basic\mine\generator.sqs"
 [] exec "letime1.sqs"
 
-muzebouchnout = false
+mp_rezim = true
+? not mp_rezim: hint "Scenar bezi v SP rezimu!\n\nPokud jste v MP, vypnete prosim scenar a prepnete jej do MP rezimu."
 
+high_ping = objnull
+
+muzebouchnout = false
+vcutok1 = false
+mame_pinga = false
+
+letime1 = false
+letime2 = false
+letime3 = false
 ~1
 ? name player == "Culidl0" : muzebouchnout = true
 

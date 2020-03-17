@@ -7,6 +7,4 @@ _i=_i+1
 ? _i < count (_group): goto "for"
 
 
-[] exec "r3.sqs"
-~ 2
 letime2 = true

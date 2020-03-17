@@ -1,0 +1,15 @@
+_i = 0
+_group = units group player
+
+? not isnull high_ping: high_ping assignascargo uh1
+
+#for
+	@ (_group select _i) in uh1
+	_i=_i+1
+? _i < count (_group): goto "for"
+
+
+? not isnull high_ping: high_ping moveincargo uh1
+letime3 = true
+publicvariable "letime3"
+resp setpos getpos resp1

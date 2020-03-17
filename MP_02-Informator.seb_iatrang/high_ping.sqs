@@ -1,0 +1,25 @@
+mame_pinga = true
+
+? mp_rezim AND (!isServer): goto "end"
+high_ping = highping
+_highgroup = group high_ping
+high_ping setpos getpos highpos
+
+#for
+	~1
+	? not alive high_ping : goto "respawnhigh_ping"
+	_highgroup move getpos (leader group player)
+	? count magazines high_ping < 10 : high_ping addmagazine "sebak47mag"
+goto "for"
+
+
+#respawnhigh_ping
+	highpos setpos getpos high_ping
+
+	deletevehicle high_ping
+	
+	"sebvc1" createUnit [getpos highpos, _highgroup, "high_ping = this;this setcaptive true; this allowfleeing 0", 1, "private"]
+goto "for"
+
+
+#end
