@@ -1,0 +1,27 @@
+? (!isServer): goto "end"
+;goto "end"
+
+_position = _this select 0
+_radiusX = _this select 1
+_radiusY = _this select 2
+
+_objects = ["sebvbush1", "sebvbush2", "sebvbush3"]
+
+_count = (_radiusX * _radiusY) / 500
+
+_i = 0
+
+
+#for
+	_object = _objects select (random (count _objects - 0.5))
+
+	_bush = _object createVehicle [(_position select 0) + (random _radiusX) - (_radiusX/2), (_position select 1) + (random _radiusY) - (_radiusY/2), 0]
+	_bush setdir random 360
+	_bush setpos [getpos _bush select 0, getpos _bush select 1, -0.1]
+	
+	_i = _i+1
+	
+? _i < _count: goto "for"
+
+
+#end

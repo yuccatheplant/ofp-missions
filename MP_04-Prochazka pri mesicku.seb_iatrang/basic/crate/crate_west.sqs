@@ -1,0 +1,33 @@
+_crate = _this select 0
+
+clearweaponcargo _crate
+clearmagazinecargo _crate
+
+_crate addWeaponCargo ["sebm16a1", 10];
+_crate addMagazineCargo ["sebm16a1mag", 100];
+_crate addMagazineCargo ["sebm16mortar", 100];
+
+_crate addWeaponCargo ["sebm79", 10];
+_crate addMagazineCargo ["sebm79HEammobag", 100];
+_crate addMagazineCargo ["sebm79buck", 100];
+
+_crate addWeaponCargo ["sebprc25", 10];
+
+_crate addWeaponCargo ["sebm60", 10];
+_crate addMagazineCargo ["sebm60mag", 100];
+
+_crate addWeaponCargo ["sebrem700", 10];
+_crate addMagazineCargo ["sebrem700mag", 100];
+
+_crate addWeaponCargo ["sebm1911", 10];
+_crate addMagazineCargo ["sebm1911mag", 100];
+
+_crate addWeaponCargo ["sebm3a1", 10];
+_crate addMagazineCargo ["sebm3a1mag", 100];
+
+_crate addWeaponCargo ["LAWLauncher", 10];
+_crate addMagazineCargo ["LAWLauncher", 100];
+
+_crate addMagazineCargo ["timebomb", 100];
+_crate addMagazineCargo ["handgrenade", 100];
+_crate addMagazineCargo ["SmokeShell", 100];

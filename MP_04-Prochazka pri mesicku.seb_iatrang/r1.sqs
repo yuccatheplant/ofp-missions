@@ -1,0 +1,17 @@
+logika globalchat "McRay: ""Hej! Kdo tam?!"""
+~5
+
+logika globalchat format ["%1: ""Nestrilej! To jsme my!""", name leader group player]
+~5
+
+logika globalchat "McRay: ""Vy jste to prezili?! Vzdyt jste vyleteli z vrtulniku!"""
+~5
+
+logika globalchat format ["%1: ""Ja osobne pristal do mekkyho, nevim jak ostatni.""", name leader group player]
+~5
+
+logika globalchat "McRay: ""Meli bysme si pohnout, za chvili tu budou ti parchanti, co nas sestrelili."""
+vcutok1 = true
+
+~5
+logika globalchat "McRay: ""My o vlku..."""

@@ -1,0 +1,11 @@
+_obj = _this select 0
+
+~1
+
+_pos = getpos _obj
+_dir = getdir _obj
+
+#for
+	~0.01
+	_obj setdir _dir
+goto "for"

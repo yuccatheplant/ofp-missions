@@ -1,0 +1,27 @@
+mame_rayre = true
+
+? mp_rezim AND (!isServer): goto "end"
+mc_reary = mcreary
+_mcreary_group = group mc_reary
+
+
+#for
+	~1
+	? not alive mc_reary : goto "respawn_mcreary"
+	mc_reary setdamage 0
+	_mcreary_group move getpos (leader group player)
+	? count magazines mc_reary < 10 : mc_reary addmagazine "sebcar15mag"
+? not eskortovano: goto "for"
+
+
+#respawn_mcreary
+	mcpos setpos getpos mc_reary
+
+	deletevehicle mc_reary
+	
+	"sebnam_acpilot" createUnit [getpos mcpos, _mcreary_group, "mc_reary = this;this setcaptive true; this allowfleeing 0;removeallweapons this; this addmagazine ""sebcar15mag""; this addweapon ""sebcar15"";", 1, "private"]
+goto "for"
+
+
+#end
+

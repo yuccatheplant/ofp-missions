@@ -1,0 +1,8 @@
+mp_rezim = false
+? not mp_rezim: hint "Scenar bezi v SP rezimu!\n\nPokud jste v MP, vypnete prosim scenar a prepnete jej do MP rezimu."
+
+mc_reary = objnull
+
+mame_rayre = false
+eskortovano = false
+vcutok1 = false
