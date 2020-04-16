@@ -1,0 +1,27 @@
+? mp_rezim AND (!isServer): goto "end"
+
+#for
+	? (count units obrana1) < 8 : [getpos usresp1, obrana1] exec "add_western_soldiers.sqs"
+	? (count units obrana2) < 8 : [getpos usresp2, obrana2] exec "add_western_soldiers.sqs"
+	? (count units obrana3) < 8 : [getpos usresp3, obrana3] exec "add_western_soldiers.sqs"
+	
+	? (count units utok1) < 8 : [getpos vcresp1, utok1] exec "add_eastern_soldiers.sqs"
+	? (count units utok2) < 8 : [getpos vcresp2, utok2] exec "add_eastern_soldiers.sqs"
+	? (count units utok3) < 8 : [getpos vcresp3, utok3] exec "add_eastern_soldiers.sqs"
+	? (count units utok4) < 8 : [getpos vcresp4, utok4] exec "add_eastern_soldiers.sqs"
+	
+	obrana1 move getpos uspos1
+	obrana2 move getpos uspos2
+	obrana3 move getpos uspos3
+	
+	utok1 move getpos uspos1
+	utok2 move getpos uspos2
+	utok3 move getpos uspos2
+	utok4 move getpos uspos3
+	
+	~1
+	
+? not endbattle:goto "for"
+	
+
+#end

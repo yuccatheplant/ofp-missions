@@ -1,0 +1,10 @@
+logika globalchat "McRay: ""Dobre. Zakladna je pod utokem, takze rychle prebehneme k nim, nez nejakou koupime, dobre?"""
+resp setpos getpos resp1
+player setcaptive true
+
+
+[] exec "bitva.sqs"
+player setcaptive false
+
+
+
