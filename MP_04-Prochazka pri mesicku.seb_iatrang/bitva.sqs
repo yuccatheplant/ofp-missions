@@ -1,5 +1,7 @@
 ? mp_rezim AND (!isServer): goto "end"
 
+"_x setfuel 1" foreach [uhc1, uhc2, uhc3, uhc4]
+
 #for
 	? (count units obrana1) < 8 : [getpos usresp1, obrana1] exec "add_western_soldiers.sqs"
 	? (count units obrana2) < 8 : [getpos usresp2, obrana2] exec "add_western_soldiers.sqs"

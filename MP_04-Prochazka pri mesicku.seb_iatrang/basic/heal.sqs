@@ -1,0 +1,17 @@
+player removeaction healyourself
+
+player switchmove "TreatedLying"
+
+player setdamage (damage player) -0.1
+~4
+
+? damage player == 0 OR not alive player: goto "zdravy"
+
+
+healyourself = player addAction ["Osetri se", "basic\heal.sqs"];
+hint "Jsi stale zraneny!\nNajdi kryt a osetri se."
+goto "konec"
+
+#zdravy
+hint "Jsi osetreny."
+#konec

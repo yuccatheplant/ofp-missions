@@ -33,7 +33,7 @@ class Mission
 		forecastWeather=0.000000;
 		month=9;
 		day=29;
-		hour=17;
+		hour=18;
 		minute=0;
 	};
 	class Groups
@@ -47,12 +47,13 @@ class Mission
 				items=6;
 				class Item0
 				{
-					position[]={10918.001953,32.007584,8109.595215};
-					azimut=-232.869781;
+					position[]={10881.054688,30.335386,8109.581055};
+					azimut=-232.869995;
 					special="NONE";
 					id=0;
 					side="WEST";
-					vehicle="sebnamarmywmedic";
+					vehicle="sebnamarmywo";
+					player="PLAYER COMMANDER";
 					leader=1;
 					rank="LIEUTNANT";
 					skill=0.600000;
@@ -156,7 +157,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={11026.009766,43.504707,8110.062988};
+					position[]={10971.327148,37.118462,8117.208496};
 					special="NONE";
 					id=9;
 					side="WEST";
@@ -195,7 +196,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={11023.330078,43.032757,8107.834473};
+					position[]={10975.825195,37.646500,8117.191406};
 					special="NONE";
 					id=11;
 					side="LOGIC";
@@ -214,13 +215,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={11509.860352,52.006989,7975.561035};
+					position[]={11013.162109,44.420147,7604.602539};
 					azimut=-356.233429;
 					special="NONE";
 					id=12;
 					side="WEST";
 					vehicle="sebnamarmywmedic";
-					player="PLAYER COMMANDER";
 					leader=1;
 					rank="LIEUTNANT";
 					skill=0.600000;
@@ -321,7 +321,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={11023.165039,43.046097,8109.803223};
+					position[]={10975.660156,37.678387,8119.160156};
 					class Effects
 					{
 					};
@@ -1141,7 +1141,7 @@ class Mission
 				class Item0
 				{
 					position[]={12028.963867,50.000000,7527.285156};
-					azimut=-45.893574;
+					azimut=-45.893600;
 					special="NONE";
 					id=84;
 					side="WEST";
@@ -1149,6 +1149,8 @@ class Mission
 					leader=1;
 					rank="LIEUTNANT";
 					skill=0.600000;
+					text="uhc4";
+					init="this setfuel 0";
 				};
 			};
 			class Waypoints
@@ -1182,7 +1184,7 @@ class Mission
 				class Item0
 				{
 					position[]={12027.582031,50.000000,7564.583984};
-					azimut=-45.893574;
+					azimut=-45.893600;
 					special="NONE";
 					id=85;
 					side="WEST";
@@ -1190,6 +1192,8 @@ class Mission
 					leader=1;
 					rank="LIEUTNANT";
 					skill=0.600000;
+					text="uhc3";
+					init="this setfuel 0";
 				};
 			};
 			class Waypoints
@@ -1223,7 +1227,7 @@ class Mission
 				class Item0
 				{
 					position[]={12030.345703,50.000000,7604.993164};
-					azimut=-45.893574;
+					azimut=-45.893600;
 					special="NONE";
 					id=86;
 					side="WEST";
@@ -1231,6 +1235,8 @@ class Mission
 					leader=1;
 					rank="LIEUTNANT";
 					skill=0.600000;
+					text="uhc2";
+					init="this setfuel 0";
 				};
 			};
 			class Waypoints
@@ -1264,7 +1270,7 @@ class Mission
 				class Item0
 				{
 					position[]={12031.726563,50.000000,7648.509277};
-					azimut=-45.893574;
+					azimut=-45.893600;
 					special="NONE";
 					id=87;
 					side="WEST";
@@ -1272,6 +1278,8 @@ class Mission
 					leader=1;
 					rank="LIEUTNANT";
 					skill=0.600000;
+					text="uhc1";
+					init="this setfuel 0";
 				};
 			};
 			class Waypoints
@@ -1302,7 +1310,7 @@ class Mission
 		items=7;
 		class Item0
 		{
-			position[]={11021.363281,42.731781,8110.896973};
+			position[]={10973.858398,37.509155,8120.253906};
 			azimut=180.000000;
 			special="NONE";
 			id=7;
@@ -1317,7 +1325,7 @@ class Mission
 		};
 		class Item1
 		{
-			position[]={11021.423828,42.727013,8110.182129};
+			position[]={10973.918945,37.501015,8119.539063};
 			special="NONE";
 			id=8;
 			side="EMPTY";
@@ -1327,7 +1335,7 @@ class Mission
 		};
 		class Item2
 		{
-			position[]={11073.377930,48.234615,8092.003418};
+			position[]={11039.899414,45.008110,8096.366699};
 			azimut=180.000000;
 			special="NONE";
 			id=21;
@@ -1391,7 +1399,7 @@ class Mission
 		items=1;
 		class Item0
 		{
-			position[]={11021.706055,42.779579,8110.158691};
+			position[]={10974.201172,37.536499,8119.515625};
 			name="asdf";
 			text="Havarie";
 			type="Marker";
@@ -1400,10 +1408,10 @@ class Mission
 	};
 	class Sensors
 	{
-		items=8;
+		items=9;
 		class Item0
 		{
-			position[]={11549.681641,63.916527,9693.814453};
+			position[]={11579.537109,68.198326,9708.303711};
 			a=0.000000;
 			b=0.000000;
 			repeating=1;
@@ -1457,7 +1465,7 @@ class Mission
 		};
 		class Item4
 		{
-			position[]={11022.916016,42.975201,8108.738770};
+			position[]={10975.411133,37.636623,8118.095703};
 			a=15.000000;
 			b=15.000000;
 			activationBy="WEST";
@@ -1482,7 +1490,7 @@ class Mission
 		};
 		class Item6
 		{
-			position[]={11025.414063,43.316639,8098.510742};
+			position[]={10977.909180,37.988319,8107.867676};
 			a=75.000000;
 			b=75.000000;
 			activationBy="EAST";
@@ -1513,6 +1521,20 @@ class Mission
 			{
 			};
 			synchronizations[]={1,2};
+		};
+		class Item8
+		{
+			position[]={11576.025391,67.797493,9676.691406};
+			a=0.000000;
+			b=0.000000;
+			repeating=1;
+			age="UNKNOWN";
+			expCond="damage player > 0 AND alive player";
+			expActiv="healyourself = player addAction [""Osetri se"", ""basic\heal.sqs""];hint ""Jsi zraneny!\nNajdi kryt a osetri se.""";
+			expDesactiv="player removeaction healyourself";
+			class Effects
+			{
+			};
 		};
 	};
 };

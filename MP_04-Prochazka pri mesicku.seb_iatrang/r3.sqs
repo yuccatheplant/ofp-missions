@@ -3,6 +3,8 @@ resp setpos getpos resp1
 player setcaptive true
 
 
+~ 40
+
 [] exec "bitva.sqs"
 player setcaptive false
 
