@@ -1,0 +1,57 @@
+
+_bushes = []
+_library = ["sebvbush1", "sebvbush2", "sebvbush3"]
+_radius = 500
+_min_radius = 300
+_limit = 1000
+
+##########################################################################
+
+#for
+	goto "clean_bushes"
+	#clean_bushes_done
+
+	hint format ["%1", count _bushes]
+	~5
+goto "for"
+
+##########################################################################
+
+#clean_bushes
+	_i = 0
+	#clean_for
+	
+		? _bushes select _i distance player > _radius : goto "delete_bush"
+		#delete_bush_done
+	
+		_i = _i+1
+	? _i < count _bushes : goto "clean_for"
+
+	#spawn_bush_done
+	? count _bushes < _limit : goto "spawn_bush"
+
+goto "clean_bushes_done"
+
+
+#delete_bush
+
+_bush = _bushes select _i
+_bushes = _bushes - [_bush]
+deletevehicle _bush
+
+goto "delete_bush_done"
+
+##########################################################################
+
+#spawn_bush
+	_bush_type = _library select (random (count _library - 0.5))
+	
+	#generate_position
+	spwnr setpos [(getpos player select 0) + (random (_radius * 2)) - _radius, (getpos player select 1) + (random (_radius * 2)) - _radius, -0.05]
+	? spwnr distance player < _min_radius : goto "generate_position"
+	
+	_bush = _bush_type createVehicle getpos spwnr
+	_bush setdir random 360
+	_bushes = _bushes + [_bush];
+	#~0.001
+goto "spawn_bush_done"

@@ -1,0 +1,100 @@
+version=11;
+class Mission
+{
+	addOns[]=
+	{
+		"sebnam_us",
+		"ks_namcti092",
+		"sebnam_wp",
+		"sebnam_obj"
+	};
+	addOnsAuto[]=
+	{
+		"sebnam_us",
+		"ks_namcti092"
+	};
+	randomSeed=1157123;
+	class Intel
+	{
+		briefingName="Relokace";
+		startWeather=0.525012;
+		forecastWeather=0.531266;
+		hour=12;
+	};
+	class Groups
+	{
+		items=2;
+		class Item0
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2243.549561,9.641611,6165.841797};
+					id=0;
+					side="WEST";
+					vehicle="sebnamarmyw";
+					player="PLAYER COMMANDER";
+					leader=1;
+					skill=0.600000;
+				};
+			};
+		};
+		class Item1
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={7153.393555,73.318840,8571.171875};
+					id=1;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.600000;
+					text="spwnr";
+				};
+			};
+		};
+	};
+	class Sensors
+	{
+		items=1;
+		class Item0
+		{
+			position[]={6881.187500,103.323814,8319.690430};
+			a=200.000000;
+			b=200.000000;
+			rectangular=1;
+			age="UNKNOWN";
+			class Effects
+			{
+			};
+		};
+	};
+};
+class Intro
+{
+	randomSeed=11356163;
+	class Intel
+	{
+	};
+};
+class OutroWin
+{
+	randomSeed=5383683;
+	class Intel
+	{
+	};
+};
+class OutroLoose
+{
+	randomSeed=9005571;
+	class Intel
+	{
+	};
+};
